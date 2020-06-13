@@ -18,17 +18,17 @@ class Doctor
   end
 
   def appointments
-    Song.all.select {|song| song.artist == self}
+    Appointment.all.select {|apt| apt.doctor == self}
   end
 
   def patients
-    genre_array = []
-    Song.all.each do|song|
-      if song.artist == self
-        genre_array << song.genre
+    new_array = []
+    Appointment.all.each do|apt|
+      if apt.doctor == self
+        new_array << apt.doctor
       end
     end
-    genre_array
+    new_array
   end
 
 end
