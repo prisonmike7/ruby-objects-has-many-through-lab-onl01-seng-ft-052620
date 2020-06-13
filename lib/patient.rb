@@ -13,7 +13,7 @@ class Patient
     @@all
   end
 
-  def new_appointment(name, genre)
+  def new_appointment(date, doctor)
 
   end
 
@@ -21,7 +21,7 @@ class Patient
 
   end
 
-  def patients
+  def doctors
 
   end
 
