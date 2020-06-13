@@ -22,7 +22,13 @@ class Patient
   end
 
   def doctors
-
+    new_array = []
+    Appointment.all.each do|apt|
+      if apt.doctor == self
+        new_array << apt.patient
+      end
+    end
+    new_array
   end
 
 end
