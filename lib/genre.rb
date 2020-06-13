@@ -14,7 +14,13 @@ class Genre
   end
 
   def songs
-
+    new_array = []
+    Song.all.each do|song|
+      if song.genre == self
+        new_array << song
+      end
+    end
+    new_array
   end
 
   def artists
