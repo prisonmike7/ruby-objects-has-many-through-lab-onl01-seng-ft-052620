@@ -28,6 +28,7 @@ class Artist
         genre_array << song.genre
       end
     end
+    genre_array
   end
 
 end
